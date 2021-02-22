@@ -1,6 +1,7 @@
 # Estudando NodeJS
 
 O foco é aprender Node.Js com o *framework express*, no entanto, outras tecnologias também serão aplicadas.
+O *express* tem foco no *back-end*, porém existem algumas opções de *template engine* disponíveis, uma das mais populares é o *handlebars*.
 
 ## Revisão
 
@@ -31,3 +32,11 @@ Após isso, ir até o arquivo `package.json` e acrescentar os scripts de inicial
 - `"dev": "nodemon app"` (para executar em desenvolvimento);
 
 Para executar o projeto, basta utilizar o comando: `npm run dev`.
+
+### Front-end
+
+O pacote utilizado é o express-handlebars e toda a documentação pode ser encontrada [aqui](https://handlebarsjs.com/);
+
+- Instalar o pacote handlebars: `npm i express-handlebars`;
+- Criar o diretório de views e layouts: `/views/layouts`;
+- No arquivo `app.js` é definido o nome do layout e a extesão padrão, foi definido nesse projeto como `main` de extensão `.hbs`, logo: `main.hbs`;

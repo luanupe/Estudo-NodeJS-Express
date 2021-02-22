@@ -1,0 +1,7 @@
+<h1 class="text-center mb-3">Há {{produtos.length}} Produtos Cadastrados</h1>
+
+<ul class="list-group">
+    {{#each produtos}}
+        <li class="list-group-item">{{this.nome}}</li>
+    {{/each}}
+</ul>
