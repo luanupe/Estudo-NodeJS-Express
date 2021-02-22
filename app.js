@@ -1,18 +1,10 @@
 const express = require('express');
 const path = require('path');
-const moment = require('moment');
+
+const logger = require('./middleware/logger');
 
 const PORTA = process.env.PORT || 8080;
 const server = express();
-
-// Middleware fazer log das requisições
-const logger = (req, res, next) => {
-    let url = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
-    let tempo = moment().format('DD/MM/YYYY HH:mm:s');
-
-    console.log(`[${tempo}] > [${req.method}] ${url}`);
-    next();
-};
 
 // Iniciar middlewares
 server.use(logger);
